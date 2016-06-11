@@ -1,0 +1,53 @@
+html
+.header {
+    display: inline-block;
+    border-style: solid;
+    border-radius: 15px;
+    position: static;
+    background-color:red;
+    width: 100%;
+    height: 100%;
+    color:black;
+    text-align:center;
+    font-size: 46px;
+
+}
+.aside {
+    display: inline;
+    border-style: solid;
+    border-radius: 15px;
+    position: static;
+    background-color:grey;
+    border-style: solid;
+    height:300px;
+    width: 31%;
+    float:left;
+    text-align:center;
+    font-size: 24px;
+    image-rendering: 
+}
+.content {
+    display: inline;
+    border-style: solid;
+    border-radius: 15px;
+    position: static;
+    background-color:orange;
+    border-style: solid;
+    height: 300px;
+    width: 68%;
+    float:left;
+    text-align:center;
+    font-size: 30px;
+}
+.footer {
+    display: inline-block;
+    border-radius: 15px;
+    border-style: solid;
+    position: static;
+    background-color:red;
+    width: 100%;
+    height: 100%;
+    color:black;
+    text-align:center;
+    font-size: 10px;
+}

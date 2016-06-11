@@ -1,0 +1,42 @@
+html
+.header {
+    display: inline-block;
+    border-style: solid;
+    border-radius: 15px;
+    position: static;
+    background-color: #585858 ;
+    width: 100%;
+    height: 100%;
+    color: #880000;
+    text-align:center;
+    font-size: 35px;
+}
+.content {
+    display: inline;
+    border-style: solid;
+    border-radius: 15px;
+    position: static;
+    background-color:orange;
+    border-style: solid;
+    height: 400px;
+    width: 100%;
+    float:left;
+    text-align:center;
+    font-size: 60px;
+    }
+.footer {
+    display: inline;
+    border-style: solid;
+    border-radius: 15px;
+    position: static;
+    background-color:orange;
+    border-style: solid;
+    height: 200px;
+    width: 100%;
+    float:left;
+    text-align:center;
+    font-size: 26px;
+}
+#hid {
+    display: none;
+}
