@@ -20,22 +20,23 @@
 		<section id="hid">
 			<footer class="footer" >
 				<h1>Im a hidden commentary. U didnt expect me, do u?</h1>
-				<script></script>
-				<p class="result"></p>
 				<button id="btn-index">Index</button>
+				<p class="result" id="result"></p>
 			</footer>
 		</section>
+		
 
 		<script type="text/javascript">
-			$('#btn-index').click(function(){
-				let xmlhttp = new XMLHttpRequest();
-				let url = "http://api.icndb.com/jokes/random";
+			$("#btn-index").click(function(){
+				var xmlhttp = new XMLHttpRequest();
+				var url = "http://api.icndb.com/jokes/random";
 
 				xmlhttp.onreadystatechange = function() {
 				    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 				        var myArr = JSON.parse(xmlhttp.responseText);
-				        console.log(myArr);
-				        $('.result').append(myArr.value.joke);
+				        console.log(myArr.value);
+				        document.getElementById("result").innerHTML = myArr.value.joke;
+				        $("result").append(myArr.value.joke);
 				    }
 				};
 				xmlhttp.open("GET", url, true);

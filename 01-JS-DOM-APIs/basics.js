@@ -1,3 +1,4 @@
 $(document).ready(function(){
-	$('#hid').fadeIn(1200);
-});
+	$("#hid").fadeIn(1200);
+})
+
