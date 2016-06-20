@@ -15,17 +15,3 @@ class Movie {
 	}
 }
 
-class EventEmitter{
-	 constructor(event) {
-        this.event = {};
-    }
-	on(){
-
-	}
-	emit(){
-
-	}
-	off(){
-
-	}
-}
