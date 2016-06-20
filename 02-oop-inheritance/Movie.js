@@ -13,5 +13,8 @@ class Movie {
 	resume(){
 		console.log("Resuming");
 	}
+
+
 }
+	
 
