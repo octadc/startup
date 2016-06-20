@@ -14,3 +14,18 @@ class Movie {
 		console.log("Resuming");
 	}
 }
+
+class EventEmitter{
+	 constructor(event) {
+        this.event = {};
+    }
+	on(){
+
+	}
+	emit(){
+
+	}
+	off(){
+
+	}
+}
