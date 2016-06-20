@@ -3,6 +3,7 @@ class Movie {
 	this.title = title;
 	this.year = year;
 	this.duration = duration;
+	this.cast = [];
 	}
 	play(){
 		console.log("Playing");
@@ -14,7 +15,9 @@ class Movie {
 		console.log("Resuming");
 	}
 
-
+	addCast(Actor){
+		this.cast.push(Actor);
+	}
 }
 	
 

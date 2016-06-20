@@ -8,7 +8,7 @@ class Social{
 
 		var varFirend = document.getElementById("friend").value;
 		var varMovie= document.getElementById("movies").value;
-		document.getElementById("shareStat").innerHTML = "You shared " varMovie + " with " + varFirend;
+		document.getElementById("shareStat").innerHTML = "You shared " + varMovie + " with " + varFirend ;
 	}
 
 	like(varFirend){

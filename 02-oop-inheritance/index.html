@@ -8,11 +8,19 @@
 		<script src="Movie.js"></script>
 		<script src="EventEmitter.js"></script>
 		<script src="Social.js"></script>
+		<script src="Actor.js"></script>
 	</head>
 	<body>
 
-
-
+	<script type="text/javascript">
+	var terminator = new Movie ("Terminator", 2016, 96);
+	var arnold = new Actor ("Arnold", "Swartcheneger");
+	var jason = new Actor ("Jason", "Clarke");
+	terminator.addCast (arnold);
+	terminator.addCast (jason);
+	console.log (terminator);	
+	</script>
+	
 
 
 	</body>
