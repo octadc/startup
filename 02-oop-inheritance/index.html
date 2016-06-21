@@ -16,9 +16,17 @@
 	var terminator = new Movie ("Terminator", 2016, 96);
 	var arnold = new Actor ("Arnold", "Swartcheneger");
 	var jason = new Actor ("Jason", "Clarke");
+	//var logger = new Logger();
+	//terminator.on("play", logger.log());
 	terminator.addCast (arnold);
 	terminator.addCast (jason);
-	console.log (terminator);	
+	console.log (terminator);
+	terminator.play();
+	terminator.pause();
+	terminator.play();
+	console.log (terminator.cast);	
+	//terminator.share('hey arnold!');
+    //terminator.like('Octavio Dellavedova');
 	</script>
 	
 

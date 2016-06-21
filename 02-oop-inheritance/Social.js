@@ -1,18 +1,16 @@
-class Social{
-	constructor(title, friend){
-		this.title = title;
-		this.friend = friend;
-	}
 
-	share(){
+var Social = {
 
-		var varFirend = document.getElementById("friend").value;
-		var varMovie= document.getElementById("movies").value;
-		document.getElementById("shareStat").innerHTML = "You shared " + varMovie + " with " + varFirend ;
-	}
+  like: function(friendName) {
 
-	like(varFirend){
-		return varFirend + " likes this."
-	}
-	
-}
+    console.log(`${friendName} likes ${this.title}`);
+
+  },
+
+  share: function(friendName){
+
+    console.log(`${friendName} share ${this.title}`);
+
+  }
+
+};

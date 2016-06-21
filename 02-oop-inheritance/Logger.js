@@ -1,6 +1,6 @@
 class Logger{
 	
 	log(info){
-		console.log(info);
+		console.log(log);
 	}
 }
