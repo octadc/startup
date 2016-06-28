@@ -1,10 +1,10 @@
 html
 .header {
-    display: inline-block;
+    display: block;
     border-style: solid;
     border-radius: 15px;
     position: static;
-    background-color:red;
+    background-color:#0431B4;
     width: 100%;
     height: 100%;
     color:black;
@@ -13,7 +13,7 @@ html
 
 }
 .aside {
-    display: inline;
+    display: inline-block;
     border-style: solid;
     border-radius: 15px;
     position: static;
@@ -23,15 +23,16 @@ html
     width: 31%;
     float:left;
     text-align:center;
-    font-size: 24px;
-    image-rendering: 
+    font-size: 24px; 
+    align-content: center;
+    align-items: center;
 }
 .content {
-    display: inline;
+    display: inline-block;
     border-style: solid;
     border-radius: 15px;
     position: static;
-    background-color:orange;
+    background-color:grey;
     border-style: solid;
     height: 300px;
     width: 68%;
@@ -44,10 +45,24 @@ html
     border-radius: 15px;
     border-style: solid;
     position: static;
-    background-color:red;
+    background-color:#0431B4;
     width: 100%;
     height: 100%;
     color:black;
     text-align:center;
     font-size: 10px;
+}
+
+a:link { color: red;}
+a:visited {color: #8A4B08;}
+a:hover { color: #0431B4;}
+a:active {color: #FFFF00}
+
+#profilePic {
+    border-radius: 80px;
+    border: 5px solid #0431B4;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+
 }
