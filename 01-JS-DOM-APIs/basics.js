@@ -27,10 +27,10 @@ function doAmatrix(){
         myarray[i]=new Array(2);
     }
 
-    myarray[0][0]= document.getElementById("cell 1").value;
-    myarray[0][1]= document.getElementById("row 1").value;
-    myarray[1][0]= document.getElementById("cell 2").value;
-    myarray[1][1]= document.getElementById("row 2").value;
+    myarray[0][0]= document.getElementById("row 1").value;
+    myarray[0][1]= document.getElementById("cell 1").value;
+    myarray[1][0]= document.getElementById("row 2").value;
+    myarray[1][1]= document.getElementById("cell 2").value;
     var table = document.createElement('table');
     var tableBody = document.createElement('tbody');
     for (var i = 0; i < myarray.length; i++) {
@@ -43,8 +43,9 @@ function doAmatrix(){
         table.appendChild(row);
     }
     table.appendChild(tableBody);
-   	document.body.appendChild(table);
-    document.getElementById("container").innerHTML = table;
+    table.setAttribute("border", "2");
+    document.getElementById("my-table").innerHTML = "";
+    document.getElementById("container").appendChild(table);
     document.getElementById("container").style.display = "block";
 }
 
