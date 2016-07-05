@@ -15,77 +15,27 @@
 			<h3> <a href="../index.html">Menu</a> </h3>
 		</header>			
 		<content class="content">
-			<p>Hello world!!</p>
-			<div id="MatixP1">
-			<input type="text" class="box" id="row 1" required>
-            <input type="text" class="box" id="cell 1" required>
-          </div>
-           <div id="MatrixP2">
-        	<input type="text" class="box" id="row 2" required>
-            <input type="text" class="box" id="cell 2" required>	         
+				<p>Hello world!!</p>
+				<div id="MatixP1">
+					<input type="text" class="box" id="row 1" required>
+	            	<input type="text" class="box" id="cell 1" required>
+	          	</div>
+	           <div id="MatrixP2">
+	        		<input type="text" class="box" id="row 2" required>
+	            	<input type="text" class="box" id="cell 2" required>	         
+				</div>
+			<button type="button" onclick="doAmatrix();">Create a matrix</button>
+			<div id="container" align="center">
 			</div>
-		<button type="button" onclick="doAmatrix()">Create a matrix</button>
-		<div id="container" align="center">
-
-			
-   		 </div>
 		</content>
-
 		<section id="hid">
-			<footer class="footer" >
 				<h1>Im a hidden commentary. U didnt expect me, do u?</h1>
-				<button id="btn-index">Joke</button>
-				<button id="btn-index2">Repository</button>
+				<button id="btn-index" onclick="joke();">Joke</button>
+				<button id="btn-index2" onclick="repositories();">Repository</button>
 				<input type="text" name="repositoryName" value="Search for a repository">
 				<input type="submit" value="Search" >
 				<p class="result" id="result"></p>
 				<div calss="ulResult" id="ulResult" ></div>
-
-			</footer>
 		</section>
-		
-
-		<script type="text/javascript">
-			$("#btn-index").click(function(){
-				var xmlhttp = new XMLHttpRequest();
-				var url = "http://api.icndb.com/jokes/random";
-
-				xmlhttp.onreadystatechange = function() {
-				    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-				        var myArr = JSON.parse(xmlhttp.responseText);
-				        console.log(myArr.value);
-				        document.getElementById("result").innerHTML = myArr.value.joke;
-				    }
-				};
-				xmlhttp.open("GET", url, true);
-				xmlhttp.send();
-			});
-		</script>
-
-		
-
-
-
-		<script type="text/javascript">
-			$("#btn-index2").click(function(){
-			ajaxPromise('https://api.github.com/search/repositories', 'GET', 'q=Javascript').then(
-			function(val) {
-				var elem = JSON.parse(val);
-				var ul = document.createElement("repositories");				
-				for(i = 0 ;i < elem.items.length ; i++) {
-					var node = document.createElement("node");
-					var textnode = document.createTextNode((elem.items[i].full_name.split("/")[0])); 
-  					node.appendChild(textnode);
-  					ul.appendChild(node);		
-				};
-				console.log(ul);
-				document.getElementById('ulResult').appendChild(ul);
-			},
-			function(err) {
-				console.log("Error loading list");
-  			});
-
-   	});	
-		</script>
 	</body>
 </html>

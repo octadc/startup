@@ -1,6 +1,6 @@
 html
 .header {
-    display: inline-block;
+    display: block;
     border-style: solid;
     border-radius: 15px;
     position: static;
@@ -24,11 +24,24 @@ html
     text-align:center;
     font-size: 60px;
     }
-.footer {
-    display: inline;
+ #container {
+    display: none;
     border-style: solid;
     border-radius: 15px;
     position: static;
+    background-color:orange;
+    border-style: solid;
+    height: 200px;
+    width: 100%;
+    float:left;
+    text-align:center;
+    font-size: 60px;
+ }       
+#hid {
+    display: block;
+    border-style: solid;
+    border-radius: 15px;
+    position: absolute;
     background-color:orange;
     border-style: solid;
     height: auto;
@@ -36,8 +49,6 @@ html
     float:left;
     text-align:center;
     font-size: 26px;
-}
-#hid {
     display: none;
 }
 /* unvisited link */
