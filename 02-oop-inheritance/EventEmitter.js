@@ -1,12 +1,12 @@
-class EventEmitter extends Movie{
-	 constructor(event) {
-        this.event = {};
+class EventEmitter{
+	 constructor() {
+        this.events = {};
     }
 	on(event, callback){
 		this.events[event] = callback;
 	}
-	emit(){
-		 this.events[event](event);
+	emit(event){
+		 this.events[event]();
 	}
 	off(){
 		delete this.events[event];

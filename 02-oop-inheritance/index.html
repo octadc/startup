@@ -5,21 +5,21 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>HTML Globant Exercise</title>
 		<link href="../normalize.css" rel="normalize">
-		<script src="Movie.js"></script>
-		<script src="EventEmitter.js"></script>
-		<script src="Social.js"></script>
-		<script src="Actor.js"></script>
+		<script type="text/javascript" src="Movie.js"></script>
+		<script type="text/javascript" src="EventEmitter.js"></script>
+		<script type="text/javascript" src="Social.js"></script>
+		<script type="text/javascript" src="Actor.js"></script>
 	</head>
 	<body style="background-color: grey;">
 
 	<h1 style="color: green;"><strong>All in console!</strong></h1>
 
 	<script type="text/javascript">
-	var terminator = new Movie ("Terminator", 2016, 96);
+	var terminator = new Movie("Terminator", 2016, 96);
 	var arnold = new Actor ("Arnold", "Swartcheneger");
 	var jason = new Actor ("Jason", "Clarke");
-	//var logger = new Logger();
-	//terminator.on("play", logger.log());
+	var logger = new Logger();
+	terminator.on("play", logger.log());
 	terminator.addCast (arnold);
 	terminator.addCast (jason);
 	console.log (terminator);
@@ -27,14 +27,12 @@
 	terminator.pause();
 	terminator.play();
 	console.log (terminator.cast);	
-	//terminator.share('hey arnold!');
-    //terminator.like('Octavio Dellavedova');
+	terminator.share('hey arnold!');
+    terminator.like('Octavio Dellavedova');
 	</script>
 	
-
-
 	</body>
 	<footer>
 		<h2> <a href="../index.html">Menu</a> </h2>
 	</footer>
-</html>
+</html>2

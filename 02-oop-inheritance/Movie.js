@@ -1,18 +1,19 @@
-class Movie {
+class Movie extends EventEmitter {
 	constructor(title, year, duration) {
+	super();
 	this.title = title;
 	this.year = year;
 	this.duration = duration;
 	this.cast = [];
 	}
 	play(){
-		console.log("Playing");
+		 super.emit("play");
 	}
 	pause(){
-		console.log("Paused");
+		 super.emit("pause");
 	}
 	resume(){
-		console.log("Resuming");
+		 super.emit("resume");
 	}
 
 	addCast(Actor){

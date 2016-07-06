@@ -9,7 +9,7 @@ var Social = {
 
   share: function(friendName){
 
-    console.log(`${friendName} share ${this.title}`);
+    console.log(`${friendName} shares ${this.title}`);
 
   }
 
