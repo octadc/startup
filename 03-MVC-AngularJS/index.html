@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>AngularJS</title>
+		<link href="../normalize.css" rel="normalize">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	</head>
+	<body ng-app="MovieApp">
+		<div ng-controller="MainController">
+			<header class="header">
+				<h1 class="title">AngularJS Movies</h1>
+			</header>
+			<div class="movies">
+				<button class="btn btn-success btn-lg" ng-click="addMovie()"/>Add Movie</button>
+				<li ng-repeat="movie in movies track by $index" class="movie-box">
+						<p>{{ movie.name }}</p>
+						<p>{{ movie.year }}</p>
+						<p>{{ movie.description }}</p>
+						<div class="thumbnail">
+							<img class="image" ng-src="{{ movie.img }}" style="width: 300px; height: 300px;">
+						</div>
+						<button class="btn btn-warning btn-md" ng-click="editMovie($index)"/>Edit Movie
+						</button>
+						<button class="btn btn-danger btn-md" ng-click="deleteMovie($index)">Delete Movie
+						</button>
+				</li>
+			</div>		
+
+
+
+		</div>
+		<footer>
+			<h2><a href="../index.html">Menu</a></h2>
+		</footer>
+		<script src="js/MainController.js"></script>
+		</body>
+</html>

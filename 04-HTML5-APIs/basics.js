@@ -1,7 +1,4 @@
 function storageInLocal(){
-	
-	
-	
 	if (typeof(Storage) !== "undefined") {
  		// Store
         var text = document.getElementById("writeSpace").value; 
@@ -38,8 +35,7 @@ function createIndexedDB(){
         dataBase.onerror = function (e)  {
             alert('Error cargando la base de datos');
         };
-	}
-    
+	}    
 }
 
 function addIndexDB(){
@@ -49,11 +45,9 @@ function addIndexDB(){
     var request = object.put({
         text: document.querySelector("#writeSpace").value,
     });
-
     request.onerror = function (e) {
         alert(request.error.name + '\n\n' + request.error.message);
     };
-
     data.oncomplete = function (e) {
         //document.querySelector("#order").value = 0;
         document.querySelector("#writeSpace").value = '';
